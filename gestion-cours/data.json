@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "intitule": "base de donnees",
+        "enseignant": "Mme.Titouchi",
+        "niveau": "A1"
+    },
+    {
+        "id": 2,
+        "intitule": "site web dynamique",
+        "enseignant": "Mme.Ascour",
+        "niveau": "A2"
+    },
+    {
+        "id": 3,
+        "intitule": "python",
+        "enseignant": "Mr.haqay",
+        "niveau": "A1"
+    },
+    {
+        "id": 4,
+        "intitule": "entreprenariat",
+        "enseignant": "Mme.Rahib",
+        "niveau": "A1"
+    },
+    {
+        "id": 5,
+        "intitule": "javascript",
+        "enseignant": "Mr.Bakar",
+        "niveau": "A1"
+    },
+    {
+        "id": 6,
+        "intitule": "Soft Skills",
+        "enseignant": "Mme.Bouftass",
+        "niveau": "A1"
+    },
+    {
+        "id": 7,
+        "intitule": "English",
+        "enseignant": "Mr.Jallal",
+        "niveau": "A1"
+    }
+]

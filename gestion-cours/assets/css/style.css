@@ -1,0 +1,320 @@
+/* Police Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, rgba(45, 52, 54, 0.9) 0%, rgba(0, 0, 0, 0.85) 100%),
+                url('assets/img/63794.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #f5f6fa;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    background: rgba(45, 52, 54, 0.75);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    animation: fadeIn 0.8s ease-out;
+}
+
+h1 {
+    color: #f5f6fa;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.8rem;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 15px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 4px;
+    background: linear-gradient(to right, #00b09b, #96c93d);
+    border-radius: 2px;
+    box-shadow: 0 2px 8px rgba(0, 176, 155, 0.4);
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 30px 0;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    background: rgba(245, 246, 250, 0.1);
+}
+
+th, td {
+    padding: 18px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+th {
+    background: linear-gradient(135deg, rgba(0, 176, 155, 0.8) 0%, rgba(150, 201, 61, 0.8) 100%);
+    color: white;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+tr {
+    transition: all 0.3s ease;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+tr:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateX(5px);
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent 25%, rgba(255, 255, 255, 0.2) 50%, transparent 75%);
+    background-size: 400% 400%;
+    opacity: 0;
+    transition: all 0.6s ease;
+    z-index: -1;
+}
+
+.btn:hover::before {
+    opacity: 1;
+    animation: shine 1.5s infinite;
+}
+
+@keyframes shine {
+    0% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.btn:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+/* Bouton Ajouter */
+.btn.add {
+    background: linear-gradient(135deg, #00b09b 0%, #96c93d 100%);
+    margin-bottom: 25px;
+    padding: 14px 28px;
+    font-size: 1rem;
+}
+
+/* Bouton Modifier */
+.btn.edit {
+    background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
+}
+
+/* Bouton Supprimer */
+.btn.delete {
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+}
+
+/* Bouton Annuler */
+.btn.cancel {
+    background: linear-gradient(135deg, #046268 0%, #7f8c8d 100%);
+}
+
+/* Icônes pour les boutons */
+.btn i {
+    margin-right: 8px;
+    font-size: 1.1em;
+}
+
+/* Formulaires modernes */
+.form-group {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #f5f6fa;
+    font-size: 1rem;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 15px 20px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+    color: #f5f6fa;
+}
+
+input[type="text"]:focus,
+select:focus {
+    border-color: #00b09b;
+    box-shadow: 0 0 0 4px rgba(0, 176, 155, 0.2);
+    outline: none;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* Filtres stylisés */
+.filters {
+    margin-bottom: 35px;
+    display: flex;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.filters input, .filters select {
+    padding: 15px 20px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    flex: 1;
+    min-width: 0;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: #f5f6fa;
+}
+
+/* Placeholder color */
+::placeholder {
+    color: rgba(245, 246, 250, 0.6);
+}
+
+/* Messages d'erreur animés */
+.error {
+    border-color: #e74c3c !important;
+    animation: pulse 0.5s;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(231, 76, 60, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(231, 76, 60, 0); }
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 0.9rem;
+    margin-top: 8px;
+    display: block;
+    font-weight: 500;
+}
+
+/* Effet de chargement */
+.loading {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border: 3px solid rgba(0, 176, 155, 0.2);
+    border-radius: 50%;
+    border-top-color: #00b09b;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 25px;
+        margin: 20px;
+        border-radius: 15px;
+    }
+    
+    h1 {
+        font-size: 2.2rem;
+    }
+    
+    .filters {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .btn {
+        width: 100%;
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+    
+    th, td {
+        padding: 15px 10px;
+    }
+}
+
+/* Animation d'entrée */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Animation des lignes du tableau */
+@keyframes fadeInRow {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+tr {
+    animation: fadeInRow 0.5s ease-out forwards;
+}
+
+/* Délai d'animation pour chaque ligne */
+tr:nth-child(1) { animation-delay: 0.1s; }
+tr:nth-child(2) { animation-delay: 0.2s; }
+tr:nth-child(3) { animation-delay: 0.3s; }
+tr:nth-child(4) { animation-delay: 0.4s; }
+tr:nth-child(5) { animation-delay: 0.5s; }
